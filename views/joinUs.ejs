@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="/css/signin.css" />
+		<title>Sign in & Sign up Form</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="forms-container">
+				<div class="signin-signup">
+					<%if (messages.error) {%> <%= messages.error %> <% } %>
+					<!-- Sign In Form -->
+					<form action="/login" class="sign-in-form" method="POST">
+						<h2 class="title">Sign in</h2>
+						<div class="input-field">
+							<i class="fas fa-user"></i>
+							<input
+								type="text"
+								placeholder="Email"
+								id="email"
+								name="email"
+								required
+							/>
+						</div>
+						<div class="input-field">
+							<i class="fas fa-lock"></i>
+							<input
+								type="password"
+								placeholder="Password"
+								id="password"
+								name="password"
+							/>
+						</div>
+						<input type="submit" value="Login" class="btn solid" />
+					</form>
+					<!-- End Sign in form -->
+
+					<!-- Sign up form -->
+					<form action="/register" class="sign-up-form" method="POST">
+						<h2 class="title">Sign up</h2>
+						<div class="sign-up-inputs">
+							<div class="sign-up-left">
+								<div class="input-field">
+									<i class="fas fa-user"></i>
+									<input
+										type="text"
+										placeholder="First Name"
+										id="fname"
+										name="fname"
+									/>
+								</div>
+								<div class="input-field">
+									<i class="fas fa-user"></i>
+									<input
+										type="text"
+										placeholder="Last Name"
+										id="lname"
+										name="lname"
+									/>
+								</div>
+								<div class="input-field">
+									<i class="fas fa-phone"></i>
+									<input
+										type="tel"
+										placeholder="Phone"
+										id="mobileNo"
+										name="mobileNo"
+									/>
+								</div>
+								<div class="input-field">
+									<i class="fas fa-envelope"></i>
+									<input
+										type="email"
+										placeholder="Email"
+										id="email"
+										name="email"
+									/>
+								</div>
+							</div>
+							<div class="sign-up-right">
+								<div class="input-field">
+									<i class="fas fa-lock"></i>
+									<input
+										type="password"
+										placeholder="Password"
+										id="password"
+										name="password"
+									/>
+								</div>
+								<div class="input-field">
+									<i class="fas fa-lock"></i>
+									<input type="password" placeholder="ConfirmPassword" />
+								</div>
+							</div>
+						</div>
+						<input type="submit" class="btn" value="Sign up" />
+					</form>
+					<!-- End Signup form -->
+				</div>
+			</div>
+
+			<!-- Cover Panels -->
+			<div class="panels-container">
+				<!-- Sign up cover panel -->
+				<div class="panel left-panel">
+					<div class="content">
+						<h3>Wanna be a Hero</h3>
+						<p>
+							Join us in our mission and be a part of fortune folks.
+						</p>
+						<button class="btn transparent" id="sign-up-btn">Join us</button>
+					</div>
+					<img src="/images/clipart2005938 (2).png" width="40%" class="image" alt="" />
+				</div>
+
+				<!-- Sign in cover panel -->
+				<div class="panel right-panel">
+					<div class="content">
+						<h3>Are folk??</h3>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+							laboriosam ad deleniti.
+						</p>
+						<button class="btn transparent" id="sign-in-btn">Sign in</button>
+					</div>
+					<img src="/images/clipart299583.png" class="image" alt="" />
+				</div>
+			</div>
+		</div>
+
+		<!-- Java Script file -->
+		<script src="/js/signin.js"></script>
+	</body>
+</html>

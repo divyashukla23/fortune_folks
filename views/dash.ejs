@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/css/dashboard.css" />
+		<link rel="stylesheet" href="/css/fortunefolks.css" />
+		<script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+		<title>DashBoard</title>
+	</head>
+	<body>
+		<%- include("_navbar.ejs", {isauth:true})-%>
+		<!-- Dashboard Section -->
+		<section id="dashboard">
+			<div class="dashboard container">
+				<div class="dash-bar">
+					<ul>
+						<li>
+							<button class="btn transparent" id="profile-btn">Profile</button>
+						</li>
+						<li>
+							<button class="btn transparent" id="request-btn">My requests</button>
+						</li>
+						<li>
+							<button class="btn transparent" id="donation-btn">My Donations</button>
+						</li>
+						<li>
+							<button
+								class="btn transparent"
+								id="donation-btn"
+								onclick="location.href='/donations/add';"
+							>
+								Donate
+							</button>
+						</li>
+						<li>
+							<button
+								class="btn transparent"
+								id="donation-btn"
+								onclick="location.href='/requests/add';"
+							>
+								Request
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="dash-content container">
+				<div class="profile">
+					<form action="/profile/update" class="sign-up-form" method="POST">
+						<div class="sign-up-inputs">
+							<div class="sign-up-left">
+								<% if(!user.verified){ %>
+								<div class="alert">
+									<span
+										class="closebtn"
+										onclick="this.parentElement.style.display='none';"
+										>&times;</span
+									>
+									<strong>Attention!</strong> Validate your account
+								</div>
+								<%}%>
+								<div class="f-box">
+									<div class="f-text">
+										<h3>FirstName</h3>
+									</div>
+									<div class="input-field">
+										<i class="fas fa-user"></i>
+										<input
+											type="text"
+											name="fname"
+											id="fname"
+											value="<%=user.firstName%>"
+										/>
+									</div>
+								</div>
+								<div class="f-box">
+									<div class="f-text">
+										<h3>LastName</h3>
+									</div>
+									<div class="input-field">
+										<i class="fas fa-user"></i>
+										<input
+											type="text"
+											id="lname"
+											name="lname"
+											value="<%=user.lastName%>"
+										/>
+									</div>
+								</div>
+								<div class="f-box">
+									<div class="f-text">
+										<h3>Phone Number</h3>
+									</div>
+									<div class="input-field">
+										<i class="fas fa-phone"></i>
+										<input
+											type="tel"
+											id="mobileNo"
+											name="mobileNo"
+											value="<%=user.mobileNo%>"
+										/>
+									</div>
+								</div>
+								<% if(!user.verfied) {%>
+								<div class="f-box">
+									<div class="f-text">
+										<h3>OTP</h3>
+									</div>
+									<div class="input-field">
+										<i class="fas fa-lock"></i>
+										<input
+											type="number"
+											id="otp"
+											name="otp"
+											placeholder="OTP"
+										/>
+									</div>
+								</div>
+								<%}%>
+								<div class="f-box">
+									<div class="f-text">
+										<h3>Email</h3>
+									</div>
+									<div class="input-field">
+										<i class="fas fa-envelope"></i>
+										<input
+											type="email"
+											id="email"
+											name="email"
+											value="<%=user.email%>"
+										/>
+									</div>
+								</div>
+							</div>
+							<div class="sign-up-right">
+								<div class="f-box">
+									<div class="f-text">
+										<h3>Old Password</h3>
+									</div>
+									<div class="input-field">
+										<i class="fas fa-lock"></i>
+										<input
+											type="password"
+											id="oldPass"
+											name="oldPass"
+											placeholder="Old Password"
+										/>
+									</div>
+								</div>
+								<div class="f-box">
+									<div class="f-text">
+										<h3>New Password</h3>
+									</div>
+									<div class="input-field">
+										<i class="fas fa-lock"></i>
+										<input
+											type="password"
+											id="password"
+											name="password"
+											placeholder="New Password"
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+						<input type="submit" class="btn" value="Update" />
+						<input type="button" class="btn" value="Resent OTP" />
+					</form>
+				</div>
+				<div class="donations">
+					<%- include('myCard',{data:donations,delRoute:"/donations/del/"}); -%>
+				</div>
+				<div class="requests">
+					<%- include('myCard',{data:requests,delRoute:"/requests/del/"}); -%>
+				</div>
+			</div>
+		</section>
+		<!-- End Dashboard section -->
+	</body>
+	<script src="/js/navbar.js"></script>
+	<script src="/js/dashboard.js"></script>
+</html>

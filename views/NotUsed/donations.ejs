@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/css/dashboard.css" />
+		<link rel="stylesheet" href="/css/fortunefolks.css" />
+		<script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+		<title>All Donations</title>
+	</head>
+	<body>
+		<%- include("_navbar.ejs", {isauth:true})-%>
+		<hr />
+		<centre><h1>All Donations</h1></centre>
+		<%- include('myCard',{data:data,delRoute:false}); -%>
+	</body>
+</html>

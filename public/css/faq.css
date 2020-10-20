@@ -1,0 +1,66 @@
+  body {
+  color: black;
+ background: black;
+    background-size: cover;
+}
+
+
+p {
+  line-height: 2rem;
+}
+
+.faq{
+    background-image:linear-gradient(black, #26a897);
+    background-size: cover;
+}
+h1{
+  color: #e040fb; 
+  font-family: 'Montserrat', sans-serif;
+  font-size: 60px
+}
+ 
+.faq-q {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.faq-a {
+  font-size: 17px;
+  font-weight: 100;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.collapsible-body{
+  display:block;
+}
+
+.collapsible {
+  background-color:#26a897;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+}
+
+.material-icons{
+  transform: translateY(8px);
+    padding: 10px;
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+
+  

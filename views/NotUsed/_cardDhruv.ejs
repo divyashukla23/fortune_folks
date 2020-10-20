@@ -1,0 +1,16 @@
+<% data.forEach(datam=>{ %> <% if (datam.isAvailable) {%>
+<div class="recipe-card">
+	<article>
+		<h2><%= datam.firstname +' '+ datam.lastname %></h2>
+		<ul>
+			<li><span class="icon icon-users"></span><span><%= datam.quantity %></span></li>
+			<li><span class="icon icon-clock"></span><span><%= datam.time %> ago</span></li>
+			<li><span class="fa fa-mobile-phone"></span><span><%=datam.mobileno%></span></li>
+		</ul>
+
+		<p class="ingredients"><span class="fa fa-file-text"></span> <%= datam.description %></p>
+		<p class="ingredients"><span class="fa fa-address-card"></span> <%= datam.address %></p>
+		<button>Location<i class="material-icons">place</i></button>
+	</article>
+</div>
+<%}%> <% }) %>

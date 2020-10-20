@@ -1,0 +1,21 @@
+<h1>Not looking for what you want? You can always Request</h1>
+<form id="demo" method="POST" action="/requests/add">
+	<label for="quantity">Quantity</label>
+	<input type="number" id="quantity" name="quantity" required />
+
+	<label for="description">Description</label>
+	<textarea id="description" name="description" required></textarea>
+
+	<h3>Pick Up Address</h3>
+	<label for="addLine1">Address Line 1</label>
+	<input type="text" id="addLine1" name="addLine1" required />
+
+	<label for="addLine2">Address Line 2</label>
+	<input type="text" id="addLine2" name="addLine2" required />
+
+	<label for="city">City</label>
+	<input type="text" id="city" name="city" required />
+	<input type="hidden" id="latitude" name="latitude" value="" required />
+	<input type="hidden" id="longitude" name="longitude" value="" required />
+	<input type="submit" />
+</form>

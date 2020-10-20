@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="/css/myCard.css" />
+<% data.forEach(datam=>{ %> <% if (datam.firstname) {%>
+<div class="card">
+	<div class="header"></div>
+	<div class="text">
+		<h1 class="food"><%= datam.firstname +' '+ datam.lastname %></h1>
+		<i class="fa fa-clock-o"> <%= datam.time %> ago</i>
+		<i class="fa fa-users"> Serves <%= datam.quantity %></i>
+		<i class="fa fa-phone"> <%=datam.mobileno%></i>
+		<i class="fa fa-address-card"> <%= datam.address %></i>
+
+		<div class="stars">
+			<li>
+				<a href="#"><i class="fa fa-star"></i></a>
+				<a href="#"><i class="fa fa-star"></i></a>
+				<a href="#"><i class="fa fa-star"></i></a>
+				<a href="#"><i class="fa fa-star"></i></a>
+				<a href="#"><i class="fa fa-star-o"></i></a>
+			</li>
+		</div>
+		<p class="info"><%= datam.description %></p>
+	</div>
+	<a
+		href="https://www.google.com/maps/search/?api=1&query=<%= datam.location %>"
+		target="_blank"
+		class="card_button green"
+		>Locate</a
+	>
+	<% if (delRoute) {%>
+	<a href="<%= delRoute+datam._id %>" class="card_button red">Remove</a>
+	<%}%>
+</div>
+
+<%}%> <% }) %>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>FAQ's - Fortune Folks</title>
+
+		<script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+		/>
+		<link rel="stylesheet" href="/css/faq.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<section>
+			<div class="container faq">
+				<div class="row">
+					<div class="col s12">
+						<center>
+							<h1 class="z-depth-2 header center white-text text-lighten-2">FAQs</h1>
+						</center>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<ul class="grey darken-4 collapsible" style="border: none">
+					<li>
+						<button type="button" class="collapsible faq-q">
+							<i class="material-icons">format_list_bulleted</i>What cities do we
+							operate on?
+						</button>
+						<div class="content">
+							<p>
+								We have a huge network present in almost all cities of India, users
+								just need to login to our website and get registered in order to
+								help the poors in thier locals, and a volunteer will get in touch
+								with you.
+							</p>
+						</div>
+					</li>
+
+					<li>
+						<button type="button" class="collapsible faq-q">
+							<i class="material-icons">format_list_bulleted</i>Who can be a
+							volunteer?
+						</button>
+						<div class="content">
+							<p>
+								A volunteer is a person who comes to us with the same vision of
+								serving the needy and a volunteer can be anyone who is willing to be
+								a hero in their respective locations you just have to provide your
+								details and get registered with us..
+							</p>
+						</div>
+					</li>
+
+					<li>
+						<button type="button" class="collapsible faq-q">
+							<i class="material-icons">format_list_bulleted</i>How to be a volunteer?
+						</button>
+						<div class="content">
+							<p>
+								A volunter is simply a member who logs in to our website (alredy
+								registered).However there are some extra benefits of being a long
+								term volunteer as you will get promoted to the core team of fortune
+								folks.
+							</p>
+						</div>
+					</li>
+
+					<li>
+						<button type="button" class="collapsible faq-q">
+							<i class="material-icons">format_list_bulleted</i>Who can donate food?
+						</button>
+						<div class="content">
+							<p>
+								Anybody with excess of food or assosiated with a food organisation
+								or restaurent where a large amount of food is being wasted can
+								donate it as our motto is to reduce the food wastage and eliminate
+								hunger from the socaity.
+							</p>
+						</div>
+					</li>
+
+					<li>
+						<button type="button" class="collapsible faq-q">
+							<i class="material-icons">format_list_bulleted</i>Who can request for
+							food?
+						</button>
+						<div class="content">
+							<p>
+								People who are willing to help a poor family or people living in
+								remote areas where a large number of food is required by poor people
+								or even for personal requirements can ask for food from our
+								organisation and we will try our best to deliver it to you at
+								earliest.
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<script>
+			var coll = document.getElementsByClassName("collapsible");
+			var i;
+
+			for (i = 0; i < coll.length; i++) {
+				coll[i].addEventListener("click", function () {
+					this.classList.toggle("active");
+					var content = this.nextElementSibling;
+					if (content.style.display === "block") {
+						content.style.display = "none";
+					} else {
+						content.style.display = "block";
+					}
+				});
+			}
+		</script>
+		<script src="navbar.js"></script>
+	</body>
+</html>

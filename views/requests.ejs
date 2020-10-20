@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/css/dashboard.css" />
+		<link rel="stylesheet" href="/css/fortunefolks.css" />
+		<script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+		<title>All Requests</title>
+	</head>
+	<body>
+		<%- include("_navbar.ejs", {isauth:isAuth})-%>
+		<hr />
+		<form action="" method="post" id="demo" style="margin-top: 5%; margin-left: 5%">
+			<label for="quantity">For How Many People :</label>
+			<input type="number" id="quantity" name="quantity" /><span> </span>
+			<lable for="range">Location Range :</lable>
+			<select id="maxDistance" name="maxDistance">
+				<span> </span>
+				<option value="">--Select--</option>
+				<option value="5">5 Km</option>
+				<option value="10">10 Km</option>
+				<option value="15">15 Km</option>
+				<option value="20">20 Km</option>
+				<option value="25">25 Km</option>
+				<option value="30">30 Km</option>
+			</select>
+			<input
+				style="display: hidden"
+				type="hidden"
+				id="latitude"
+				name="latitude"
+				value=""
+				required
+			/>
+			<input
+				style="display: hidden"
+				type="hidden"
+				id="longitude"
+				name="longitude"
+				value=""
+				required
+			/>
+			<button type="submit">Submit</button>
+		</form>
+		<div style="margin: 2%; margin-top: -5%; padding: 2%">
+			<%- include('myCard',{data:data,delRoute:false}); -%>
+		</div>
+
+		<script src="/js/getLocation.js"></script>
+	</body>
+</html>

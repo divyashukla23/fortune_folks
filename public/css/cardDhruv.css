@@ -1,0 +1,104 @@
+.recipe-card {
+	background: #fff;
+	margin: 5px auto;
+	width: 100%;
+	max-width: 496px;
+	min-height: 40vh;
+}
+.recipe-card article {
+	padding: 10px 8px;
+}
+.recipe-card article ul {
+	list-style: none;
+	margin: 7px 0 0;
+	padding: 0;
+}
+.recipe-card article ul li {
+	display: inline-block;
+	margin-left: 10px;
+	line-height: 10px;
+}
+.recipe-card article ul li:first-child {
+	margin-left: 0;
+}
+.recipe-card article ul li .icon {
+	vertical-align: bottom;
+}
+.recipe-card article ul li span:nth-of-type(2) {
+	margin-left: 5px;
+	font-size: 20px;
+	font-weight: 300;
+	vertical-align: middle;
+	color: #838689;
+}
+.recipe-card article h2,
+.recipe-card article h3 {
+	margin: 0;
+	font-weight: 300;
+}
+.recipe-card article h2 {
+	font-size: 30px;
+	color: #222222;
+}
+.recipe-card article h3 {
+	font-size: 25px;
+	color: #838689;
+}
+.recipe-card article p {
+	margin: 7px 0;
+	font-size: 15px;
+	font-weight: 400;
+	color: #222222;
+}
+.recipe-card article p span {
+	font-weight: 700;
+	color: #000000;
+}
+.recipe-card .icon {
+	display: inline;
+	display: inline-block;
+	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/203277/recipe-card-icons.svg);
+	background-repeat: no-repeat;
+}
+.recipe-card .icon-clock,
+.recipe-card .icon-clock\:regular {
+	background-position: 0 -19px;
+	width: 20px;
+	height: 20px;
+	transform: translateY(5px);
+}
+.recipe-card .icon-level,
+.recipe-card .icon-level\:regular {
+	background-position: 0 -39px;
+	width: 16px;
+	height: 19px;
+}
+.recipe-card .fa-mobile-phone {
+	font-size: 30px;
+	color: #57abf2;
+	transform: translateY(3px);
+}
+.recipe-card .icon-users,
+.recipe-card .icon-users\:regular {
+	background-position: 0 -84px;
+	width: 18px;
+	height: 18px;
+	transform: translateY(3px);
+}
+.recipe-card .fa-address-card {
+	font-size: 20px;
+	color: #57abf2;
+}
+.recipe-card .material-icons {
+	font-size: 20px;
+	color: #57abf2;
+}
+
+.recipe-card .fa-file-text {
+	font-size: 20px;
+	color: #57abf2;
+}
+.recipe-card button {
+	font-size: 15px;
+	border: none;
+}

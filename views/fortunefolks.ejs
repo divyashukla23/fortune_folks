@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Folks</title>
+    <link rel="stylesheet" href="./css/fortunefolks.css">
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous">
+    </script>   
+    <link rel="stylesheet" href="/css/navbar.css">
+</head>
+<body>
+        <!-- Header section -->
+        <section id="header">
+            <div class="header container">
+                <div class="nav-bar">
+                    <div class="brand">
+                        <a href="/"><h1><span>F</span>ortune <span>F</span>olks</h1></a>
+                    </div>
+                    <div class="nav-list">
+                        <div class="hamburger"><div class="bar"></div></div>
+                        <ul>
+                             <!-- <li> <img src="./images/nav-img.jpeg" alt="nav-image" class="nav-img">  </li> -->
+                           <!-- <li> <a href="#home"     data-after="Home">Home</a></li> -->
+                            <li> <a href="#about"    data-after="About">About</a></li>
+                         <!--   <li> <a href="#team"   data-after="team">team</a></li> -->
+                            
+                            <li> <a href="/donations"  data-after="Contact">Donations</a></li>
+                            <li> <a href="/requests"  data-after="Contact">Requests</a></li>
+
+                            <% if(!isauth) { %>
+                                <li> <a href="#contact"  data-after="Contact">Contact</a></li>
+                            <li><a href ="/login" data-after="Register"> <button type="button" class="join-btn">LOGIN</button></a></li>
+                            <% } else{ %>
+                            <li> <a href="/dashboard" data-after="joinus">Dashboard</a></li>
+                            <li><a href ="/logout" data-after="Register"> <button type="button" class="join-btn">Logout</button></a></li>
+                            <%}%>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Header section -->
+        
+
+    <!-- Cover Section -->
+    <div id="home">
+        <div class="home container">
+            <div class="slider">
+                <div class="load"></div>
+                <div class="content">
+                    <div class="principal">
+                        <h1 class="main-title">Welcome to Fortune Folks</h1>
+                        <h2>Help us donate food for pooR</h2>
+                        <div class="main-links">
+                            <a href="/donations/add" class="fta">Donate Food</a>
+                            <a href="/requests/add" class="fta">Request Food</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Cover section -->
+
+    <!-- About section -->
+    <section id="about">
+        <div class="about container">
+            <div class="about-left">
+                <div class="about-image">
+                    <img src="./images/about us.jpeg" width="250px" alt="about-image">
+                </div>
+            </div>
+            <div class="about-right">
+                <h1 class="section-title">About <span>Us</span></h1>
+                <h2>"A family could eat of the food you waste"</h2>
+                <p>
+                   We are a dedicated organisation who pledged to help poor and needy by 
+                   supplying the help that consists of atleast a one time meal. Families especially the low/no income earners who have being forced to abandon their source of livelihoods just to stay alive,
+                   find it extremely difficult to put food on the table. a bid to alleviate the pains of the people especially 
+                   those that can be referred to as 'poorest of poor'. We belive that the basic human rights must be given  to everyone across the globe and thus 
+                   we made this initiative of working together to eliminate hunger from India.We are a non -profit oragnization and we work for poor and needy to serve them in the best way we can.
+                   <a href="/work">Get to know how we work</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- End About section -->
+<hr>
+     <!-- initiative section -->
+     <section id="initiatives">
+        <div class="initiatives container">
+            <div class="initiative-top">
+                <h1 class="section-title">initi<span>a</span>tives</h1>
+                <p><b>We have a vision to reach almost 1000+ poor families all around the country by the end of this year.</b></p>
+            </div>
+            <div class="initiative-bottom">
+                <div class="initiative-item">
+                    <h2><b>FOOD FOR ALL SCHEME</b></h2>
+                    <p>We have palnned for launching this scheme after 150+ volunteers join us. </p>
+                </div>
+                <div class="initiative-item">
+                    <h2><b>HOPE Scheme </b></h2>
+                    <p>HOPE stands for Help other people eat. This is our main scheme that is ongoing since we started this mission. </p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- End initiative section -->
+    <!-- Team section -->
+    <section id="team">
+    <div class="team container">
+        <div class="team-top">
+        <h1 class="section-title"> Our <span>Team</span></h1>
+        </div>
+        <table>
+            <td>
+                <div class="team-member">
+                    <div class="team-image">
+                        <img src="./images/teams/divs.jpeg"  alt="sakshi" width="250px">
+                    </div>
+                    <div class="details">
+                        <div class="center">
+                            <h1>Divya Shukla<br><span>Founder</span></h1>
+                            <p>Frontend web developer and graphics designer.</p>
+                            <ul>
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="team-member">
+                    <div class="team-image">
+                        <img src="./images/teams/samie.jpeg"  alt="samara" width="250px">
+                    </div>
+                    <div class="details">
+                        <div class="center">
+                            <h1>Samara Sunny<br><span>Co-founder</span></h1>
+                            <p>Frontend web developer and technical support head.</p>
+                            <ul>
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </table>
+
+        <table>
+        <td>   
+        <div class="team-member">
+            <div class="team-image">
+                <img src="./images/teams/drv.jpeg"  alt="samara" width="250px">
+            </div>
+            <div class="details">
+                <div class="center">
+                    <h1>Dhruv Agarwal<br><span>Co-founder</span></h1>
+                    <p>Frontend web developer and technical support head.</p>
+                    <ul>
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </td>
+        <td>
+        <div class="team-member">
+            <div class="team-image">
+                <img src="./images/teams/daram.jpeg"  alt="samara" width="250px">
+            </div>
+            <div class="details">
+                <div class="center">
+                    <h1>Daram Niteesh<br><span>Co-founder</span></h1>
+                    <p>Backend web developer and technical support head.</p>
+                    <ul>
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </td>
+        <td>
+        <div class="team-member">
+            <div class="team-image">
+                <img src="./images/teams/sahu.jpeg"  alt="samara" width="250px">
+            </div>
+            <div class="details">
+                <div class="center">
+                    <h1>Sashank Sahu<br><span>Co-founder</span></h1>
+                    <p>Backend web developer and technical support head..</p>
+                    <ul>
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </td>
+    </table>
+    </div>
+</section>
+<!-- End Team section -->
+<!-- Join us bar -->
+<section id="joinus">
+    <div class="join-container">
+        <div class="join-button">
+            <a href = '/donate/money' target="blank">
+            <button type="button" class="join-btn">Contribute💰</button>
+        </a>
+        </div>
+        <div class="join-text">
+            <h2>to our organization</h2>
+        </div>
+    </div>
+</section>
+    <!-- Contact section -->
+    <section id="contact">
+        <!-- <h1 class="section-title">Contact <Span>Us</Span></h1> -->
+        <div class="contact container">
+                <!-- <span class="big-circle1"></span> -->
+                <!-- <span class="big-circle2"></span>     -->
+                <img src="./images/shape.png" class="square" alt="" />
+                <div class="form">
+                  <div class="contact-info">
+                    <h3 class="title">Contact Us</h3>
+                    <div class="info">
+                      <div class="information">
+                        <img src="./images/contact-location.png" alt="location">
+                        <p>126 CV Raman Lucknow-227301 , U.P , India</p>
+                      </div>
+                      <div class="information">
+                        <img src="./images/contact-mail.png" alt="Gmail">
+                        <p>fortunefolks@gmail.com</p>
+                      </div>
+                      <div class="information">
+                        <img src="./images/contact-phone.png" alt="Phone">
+                        <p>0123456789</p>
+                      </div>
+                    </div>
+          
+                    <div class="social-media">
+                      <p>Connect with us :</p>
+                      <div class="social-icons">
+                        <a href="#">
+                          <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                          <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                          <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                          <i class="fab fa-linkedin-in"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+          
+                  <div class="contact-form">
+                    <span class="circle one"></span>
+                    <span class="circle two"></span>
+
+                    <form action="index.html" autocomplete="off">
+                      <h3 class="title">Send a Message</h3>
+                      <div class="input-container">
+                        <input type="text" name="name" class="input" />
+                        <label for="">First Name</label>
+                        <span>First Name</span>
+                      </div>
+                      <div class="input-container">
+                        <input type="text" name="name" class="input" />
+                        <label for="">Last Name</label>
+                        <span>Last Name</span>
+                      </div>
+                      <div class="input-container">
+                        <input type="email" name="email" class="input" />
+                        <label for="">Email</label>
+                        <span>Email</span>
+                      </div>
+                      <div class="input-container">
+                        <input type="tel" name="phone" class="input" />
+                        <label for="">Phone</label>
+                        <span>Phone</span>
+                      </div>
+                      <div class="input-container textarea">
+                        <textarea name="message" class="input"></textarea>
+                        <label for="">Message</label>
+                        <span>Message</span>
+                      </div>
+                      <div class="submit-box">
+                      <input type="submit" value="Send" class="btn"/>
+                      <i class="fa fa-paper-plane"></i>  
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </section>
+    <!-- End contact section -->
+
+    <!--NEED HELP-->
+    <section id="joinus">
+        <div class="join-container">
+            <div class="join-button">
+                <a href = '/faq' target="blank">
+                <button type="button" class="join-btn">NEED HELP?</button>
+            </a>
+            </div>
+           
+        </div>
+    </section>
+
+    <!-- Footer section -->
+    <section id="footer">
+        <div class="footer container">
+            <div class="footer-container">
+                <div class="footer-col-1">
+                    <h2>About us</h2>
+                    <div class="footer-logo"><img src="./Images/final_logo.png" alt="Logo" ></div>
+                    <p>"Don't be rude donate some food."</p>
+                </div>
+                <div class="footer-col-2">
+                    <h2>Follow us</h2>
+                    <div class="social-links"> 
+                        <ul>
+                            <li>
+                                <a href="https://www.instagram.com/fortune_folks/" target="blank"><i class="fa fa-facebook" area-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/fortune_folks/"target="blank"><i class="fa fa-instagram" area-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/fortune_folks/"target="blank"><i class="fa fa-linkedin" area-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/fortune_folks/"target="blank"><i class="fa fa-twitter" area-hidden="true"></i></a>
+                            </li>
+                        </ul>          
+                    </div>
+                </div>
+                <div class="footer-col-3">
+                    <form action="">
+                        <div class="main-box">
+                            <h2>Connect </h2>
+                            <p>
+                             Subscribe to our newsletter for updates
+                            </p>
+                            <div class="email-box">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <input type="email" class="textBox" placeholder="Type your Email">
+                                <button class="btn" type="button">Subscribe</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </div>
+    <hr>
+    <div class="end-p"><p> © Made with ❤ by Team Fortune_folks 2020. All rights reserved</p></div>
+
+    </section>
+    <!-- Footer section -->
+
+<script src="./js/fortunefolks.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+<!--<script type="text/javascript">
+    $(document).ready(function(){
+        $('#search').click(function(){
+            $('.menu-item').addClass('hide-item')
+            $('.search-form').addClass('active-search')
+            $('.close').addClass('active-search')
+            $('#search').hide()
+  
+        })
+        $('.close').click(function(){
+            $('.menu-item').removeClass('hide-item')
+            $('.search-form').removeClass('active-search')
+            $('.close').removeClass('active-search')
+            $('#search').show()
+        })
+    })
+</script> -->
+<script src="/js/navbar.js"></script>
+</body>
+</html>

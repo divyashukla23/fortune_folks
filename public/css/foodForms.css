@@ -1,0 +1,128 @@
+h1 {
+	font-family: "Ubuntu", sans-serif;
+	background: linear-gradient(#26a897, orange);
+
+	color: white;
+}
+
+input[type="text"],
+select,
+textarea {
+	border: none;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 2px;
+	background: #f8f4e5;
+	padding-left: 5px;
+	outline: none;
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+	border: 1px solid #6bd4b1;
+}
+
+label {
+	width: 100%;
+	font-size: 12pt;
+	line-height: 24pt;
+	transform: translateX(15px);
+}
+
+input[type="submit"] {
+	display: block;
+	float: right;
+	line-height: 24pt;
+	padding: 0 30px;
+	border-radius: 150px;
+	border: none;
+	background: #f45702;
+	color: white;
+	letter-spacing: 2px;
+	transition: 0.2s all ease-in-out;
+	border-bottom: 2px solid transparent;
+	margin: 15px;
+}
+
+@media screen and (max-width: 600px) {
+	input[type="submit"] {
+		width: 100%;
+		margin-top: 15px;
+	}
+}
+input[type="submit"]:hover {
+	background: inherit;
+	color: #f45702;
+	border-bottom: 2px solid #f45702;
+}
+
+.container1 {
+	background: url("https://i.ibb.co/WkgsWtk/Nature-Sunset-Zoom-Virtual-Background.jpg") center
+		center no-repeat;
+	background-size: cover;
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	align-items: center;
+	justify-items: center;
+}
+
+.container2 {
+	background-color: #f2f2f2;
+	padding: 20px;
+	box-shadow: 15px 10px 18px #0f0b15;
+	height: auto;
+	width: 300px;
+	margin-top: inherit;
+	border-radius: 50px;
+}
+.container3 {
+	background: url("https://i.ibb.co/DtPRG12/Whats-App-Image-2020-10-13-at-8-13-56-PM.jpg") center
+		center no-repeat;
+	background-size: cover;
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	align-items: center;
+	justify-items: center;
+}
+
+.col-25 {
+	float: left;
+	width: 25%;
+	display: contents;
+}
+
+.col-100 {
+	float: left;
+	width: 100%;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+@media screen and (max-width: 600px) {
+	.col-25,
+	.col-100 {
+		width: 100%;
+		margin-top: 0;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.container1 {
+		display: block;
+		width: 100%;
+	}
+	.container2 {
+		display: block;
+		height: 70%;
+	}
+	.container3 {
+		display: block;
+		width: 100%;
+	}
+}

@@ -1,0 +1,66 @@
+<link
+	rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+	integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+	crossorigin="anonymous"
+/>
+
+<!-- CSS only -->
+<link
+	rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+	crossorigin="anonymous"
+/>
+
+<!-- JS, Popper.js, and jQuery -->
+<script
+	src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+	integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+	crossorigin="anonymous"
+></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+	integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+	crossorigin="anonymous"
+></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+	integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+	crossorigin="anonymous"
+></script>
+
+<% data.forEach(datam=>{ %> <% if (datam.isAvailable) {%>
+<div class="card bg-light m-4">
+	<div class="card-header">
+		<h4 class=""><%= datam.firstname +' '+ datam.lastname %></h4>
+		<i class="fa fa-mobile" aria-hidden="true"></i>
+		<a href="tel:%=dat<am.mobileno%>"> <%=datam.mobileno%> </a>
+	</div>
+	<div class="card-body">
+		<h5 class="card-title">
+			<i class="fa fa-users" aria-hidden="true"></i>
+			<%= datam.quantity %>
+			<i class="fa fa-clock-o" aria-hidden="true"></i>
+			<%= datam.time %> ago
+		</h5>
+		<p class="card-text"></p>
+		<p class="card-text">
+			<i class="fa fa-address-card" aria-hidden="true"></i>
+			<%= datam.address %>
+		</p>
+		<p class="card-text"><%= datam.description %></p>
+
+		<p class="card-text"></p>
+		<a
+			href="https://www.google.com/maps/search/?api=1&query=<%= datam.location %>"
+			target="_blank"
+			class="btn btn-primary"
+			>Location Here</a
+		>
+		<% if (delRoute) {%>
+		<a href="<%= delRoute+datam._id %>" class="btn btn-warning">Remove</a>
+		<%}%>
+	</div>
+</div>
+<%}%> <% }) %>

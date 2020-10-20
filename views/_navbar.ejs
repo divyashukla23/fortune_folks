@@ -1,0 +1,34 @@
+<section id="header">
+	<div class="header container">
+		<div class="nav-bar">
+			<div class="brand">
+				<a href="/"
+					><h1><span>F</span>ortune <span>F</span>olks</h1></a
+				>
+			</div>
+			<div class="nav-list">
+				<div class="hamburger"><div class="bar"></div></div>
+				<ul>
+					<li><a href="/" data-after="Home">Home</a></li>
+					<li><a href="/donations" data-after="About">Donations</a></li>
+					<li><a href="/requests" data-after="joinus">Requests</a></li>
+					<!--   <li> <a href="#team"   data-after="team">team</a></li> -->
+					<% if(!isauth) { %>
+					<li>
+						<a href="/login" data-after="Register">
+							<button type="button" class="join-btn">LOGIN</button></a
+						>
+					</li>
+					<% } else{ %>
+					<li><a href="/dashboard" data-after="joinus">Dashboard</a></li>
+					<li>
+						<a href="/logout" data-after="Register">
+							<button type="button" class="join-btn">Logout</button></a
+						>
+					</li>
+					<%}%>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
